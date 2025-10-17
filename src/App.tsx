@@ -9,17 +9,7 @@ function App() {
       <Header />
       <Entries>
         {entriesData.map((entry) => {
-          return (
-            <Entry
-              imageURL={entry.image.src}
-              imageAlt={entry.image.alt}
-              country={entry.country}
-              googleMapsURL={entry.googleMapsURL}
-              location={entry.location}
-              date={entry.date}
-              description={entry.description}
-            />
-          );
+          return <Entry key={entry.id} entry={entry} />
         })}
       </Entries>
     </>
